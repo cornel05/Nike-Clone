@@ -1,0 +1,302 @@
+/* Nike Clone Custom Styles */
+
+/* Global Styles */
+:root {
+    --nike-black: #111;
+    --nike-white: #fff;
+    --nike-gray: #757575;
+    --nike-light-gray: #f5f5f5;
+    --nike-orange: #ff6900;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+/* Product Cards */
+.product-card {
+    transition: all 0.3s ease;
+    border: none !important;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.product-card .card-img-top {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+/* Launch Cards */
+.launch-card {
+    transition: all 0.3s ease;
+}
+
+.launch-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Category Cards */
+.category-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 17, 17, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-card:hover .category-overlay {
+    opacity: 1;
+}
+
+/* Countdown Timer */
+.countdown {
+    font-family: 'Courier New', monospace;
+    color: var(--nike-black);
+}
+
+.countdown .days,
+.countdown .hours,
+.countdown .minutes,
+.countdown .seconds {
+    color: var(--nike-black);
+}
+
+/* Size Selector */
+.size-selector .btn-check:checked + .btn {
+    background-color: var(--nike-black);
+    border-color: var(--nike-black);
+    color: white;
+}
+
+.size-selector .btn {
+    min-width: 60px;
+    font-weight: 600;
+}
+
+/* Product Images */
+.product-thumb {
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.product-thumb:hover,
+.product-thumb.active {
+    border-color: var(--nike-black);
+}
+
+.launch-thumb {
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.launch-thumb:hover,
+.launch-thumb.active {
+    border-color: var(--nike-black);
+}
+
+/* Store Cards */
+.store-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.store-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-2px);
+}
+
+/* Search Results */
+#searchResults {
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1050;
+}
+
+.search-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-item:hover {
+    background-color: #f8f9fa;
+}
+
+.search-item:last-child {
+    border-bottom: none;
+}
+
+/* Buttons */
+.btn-dark {
+    background-color: var(--nike-black);
+    border-color: var(--nike-black);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.btn-outline-dark {
+    border-color: var(--nike-black);
+    color: var(--nike-black);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--nike-black);
+    border-color: var(--nike-black);
+}
+
+/* Footer */
+footer {
+    background-color: var(--nike-black) !important;
+}
+
+footer a:hover {
+    color: var(--nike-white) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .countdown {
+        font-size: 0.9rem;
+    }
+    
+    .display-6 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .card-img-top {
+        height: 200px !important;
+    }
+    
+    .countdown .col {
+        padding: 0 5px;
+    }
+}
+
+/* Utility Classes */
+.text-nike-black {
+    color: var(--nike-black) !important;
+}
+
+.bg-nike-black {
+    background-color: var(--nike-black) !important;
+}
+
+.text-nike-gray {
+    color: var(--nike-gray) !important;
+}
+
+.bg-nike-light-gray {
+    background-color: var(--nike-light-gray) !important;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--nike-gray);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--nike-black);
+}

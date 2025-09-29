@@ -4,6 +4,9 @@ abstract class BaseController {
     protected $db;
     
     public function __construct() {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         $this->db = Database::getInstance()->getConnection();
     }
     
